@@ -1,0 +1,12 @@
+# 统一换行：仓库内存 LF，检出时按平台
+* text=auto eol=lf
+
+# 文档与日志一律 LF，避免 diff 噪音
+*.md   text eol=lf
+*.txt  text eol=lf
+*.json text eol=lf
+
+# 二进制
+*.png  binary
+*.jpg  binary
+*.pdf  binary

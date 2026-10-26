@@ -1,0 +1,26 @@
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 临时文件
+*.tmp
+*.bak
+~$*
+
+# 本地抓包（未脱敏的一律不入库）
+out/
+*.pcap
+*.pcapng
+
+# 反编译产物（不随仓库分发）
+jadx_out/
+apktool_out/
+*.apk
+*.dex
