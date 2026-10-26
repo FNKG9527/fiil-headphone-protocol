@@ -102,8 +102,7 @@ Anything unconfirmed is always marked `Unconfirmed` in the documentation and col
 ├── CHANGELOG.md
 ├── en/                              # English translation (mirrors the Chinese layout)
 │   ├── README.md
-│   ├── DISCLAIMER.md · CONTRIBUTING.md · CODE_OF_CONDUCT.md
-│   └── SECURITY.md · CHANGELOG.md
+│   └── DISCLAIMER.md · CONTRIBUTING.md · CODE_OF_CONDUCT.md · SECURITY.md · CHANGELOG.md
 └── docs/
     ├── README.md                    # Documentation index (with reading order)
     ├── PROTOCOL_FIIL.md             # Protocol specification overview
