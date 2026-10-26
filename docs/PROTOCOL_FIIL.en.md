@@ -23,7 +23,7 @@
 | **GET and SET have different semantics** | GET: `cid=39` fixed + cmdId holds the query code; SET: `cid=` command family + **cmdId is always 0**. See §3.12 |
 | Connection direction | The phone is the **RFCOMM client** (`createRfcommSocketToServiceRecord`) / **GATT client** (`connectGatt`) |
 | Handshake | After a successful connection **the first frame must be `setUnlock`** (`00 27 01 00 04 FF 02 02 34`), otherwise the earbuds stay silent for every query |
-| Response classification | The `type` byte (offset 2): `0x01`=REQ / `0x02`=RESP / `0x03`=NOTIFY. **The old implementation mistook it for a version number and hard-coded "discard if !=0x01", so every response was thrown away** |
+| Response classification | The `type` byte (offset 2): `0x01`=REQ / `0x02`=RESP / `0x03`=NOTIFY. **The old implementation mistook it for a version number and hard-coded `discard if !=0x01`, so every response was thrown away** |
 
 ---
 
@@ -54,7 +54,7 @@ Three-level fallback on the module side (**key point: `createRfcommSocketToServi
 
 1. Standard SPP (`00001101-…`) **can `connect()` successfully but the earbuds stay completely silent** — zero responses to every query;
 2. The custom UUID (`d52b47bc-…`) connects and does answer, but on the Android side RFCOMM gets kicked by the earbuds over and over (`dumpsys bluetooth_manager` shows `scn:6 opened=21 closed=0 leaked=21`);
-3. BLE GATT (`ff17` write / `ff18` receive) **is stable, and the Mate frame format is byte-for-byte identical to SPP**.
+3. BLE GATT (ff17 write / ff18 receive) **is stable, and the Mate frame format is byte-for-byte identical to SPP**.
 
 So the module's strategy is: try SPP first → if all three RFCOMM attempts fail, or 3.5 seconds pass with zero responses after connecting → switch to GATT automatically.
 
@@ -368,7 +368,7 @@ Module behaviour: GAIA models are sent 0/1/2 as-is; Mate models have only two st
 
 **On-device re-check (2026-10-25, FIIL Key Max / firmware 3.0.1.1 / over BLE GATT)**: Mate's cid=37 cmdId=0 **accepts all three values 0/1/2** in practice; after the SET is acked,
 GET_LL(39/8) reads back the same value that was written, so it is not limited to a boolean two-state. The module therefore opens Mate up to three levels as well:
-FiilMate.Param.LOW_LATENCY = 37, payload [level]. **"Mate is two-state" was an inference drawn early from reading only the `setLowDelay(boolean)` signature, and has been overturned by the device.**
+FiilMate.Param.LOW_LATENCY = 37, payload [level]. **"Mate is two-state" was an inference drawn early from reading only the setLowDelay(boolean) signature, and has been overturned by the device.**
 
 ### 3.7.1 Voice prompt volume (Mate only, cid=1 cmdId=3)
 
@@ -549,7 +549,7 @@ seq  cid=40 t=3 rsv len=14 cmd=0x83(131) len=12  payload(12B, suspected peer dev
 ```
 
 - The `type` field (offset 2) is **`0x01`=REQUEST / `0x02`=RESPONSE / `0x03`=NOTIFY**, not a version number.
-  **The old implementation hard-coded "discard if !=0x01", so every RESPONSE was thrown away as noise** — this is one of the direct reasons "the UI always showed not connected".
+  **The old implementation hard-coded `discard if !=0x01`, so every RESPONSE was thrown away as noise** — this is one of the direct reasons "the UI always showed not connected".
 - Under `cid=40`, `cmd=0x83(131)` is not in any known table, so it is currently treated as "multipoint peer information" (the 12 bytes contain `D8:80:83:00:00:01` = another paired device).
 
 ---
@@ -693,4 +693,4 @@ The purpose of this document is to **study Bluetooth protocol stack design** and
 - bypass a device's firmware checks or perform unauthorized OTA;
 - claim compatibility with FIIL official products in a commercial product.
 
-This repository contains documentation only, no code. The upstream reference projects (HyperPods / HuaweiPods / OppoPods) are licensed under GPL-3.0, and none of their code has been copied into this repository; see [NOTICE](../NOTICE) for the attribution and the exact boundary.
+This repository contains documentation only, no code. The upstream reference projects (HyperPods / HuaweiPods / OppoPods) are licensed under GPL-3.0, and their code has **not** been copied into this repository; see [NOTICE](../NOTICE) for the attribution and the exact boundary.

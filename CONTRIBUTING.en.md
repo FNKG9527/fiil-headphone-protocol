@@ -110,19 +110,19 @@ Use a table for verification results, with the columns fixed as: **Item / Comman
 ## PR Description
 
 ```markdown
-## 改了什么
-（一句话）
+## What changed
+(one sentence)
 
-## 为什么
-（问题是什么，或者补什么数据）
+## Why
+(what the problem is, or what data this adds)
 
-## 证据
-（文件:行号 或 evidence/ 下的日志文件名）
+## Evidence
+(file:line, or the log filename under evidence/)
 
-## 脱敏自查
-- [ ] 无真实 MAC / 第三方设备地址
-- [ ] 无绝对路径
-- [ ] 无个人标识
+## Redaction self-check
+- [ ] No real MAC / no third-party device address
+- [ ] No absolute path
+- [ ] No personal identifier
 ```
 
 ---

@@ -2,7 +2,7 @@
 
 # FIIL+ 3.5.2 Reverse Engineering Analysis Report
 
-> Objective: figure out exactly **how the FIIL+ (斐耳) App connects to its own earbuds**, **how it controls them**, **what features it has**, and **how it sends commands**.
+> Objective: figure out exactly **how the FIIL+ (Feier) App connects to its own earbuds**, **how it controls them**, **what features it has**, and **how it sends commands**.
 > Nature: learning / research use. All conclusions come from static decompilation reading of the APK (jadx + apktool); no live attack activity.
 
 ---
@@ -948,4 +948,3 @@ Windows has no native rfcomm command line; you can use Python `pybluez` or `blea
 ---
 
 *Basis for this report: jadx 1.5.6 decompilation of `fiil+_3.5.2.apk`; every conclusion carries source line numbers and can be checked item by item.*
-

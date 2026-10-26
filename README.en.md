@@ -2,7 +2,7 @@
 
 # FIIL Headphone Bluetooth Protocol Reverse-Engineering Notes
 
-> A write-up of the static reverse-engineering results for FIIL (斐耳)'s official control app **FIIL+ 3.5.2**, together with a command-by-command on-device verification record on one real pair of headphones.
+> A write-up of the static reverse-engineering results for FIIL (Feier)'s official control app **FIIL+ 3.5.2**, together with a command-by-command on-device verification record on one real pair of headphones.
 > There is only one goal: **to let third parties speak FIIL's protocol correctly on their own devices.**
 
 ![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)
@@ -48,7 +48,7 @@ To understand the whole picture: read **§0 Key findings at a glance** and **§5
 ```
 Frame layout (both command namespaces share the same transport channel)
 
-Pos  0     1     2      3       4         5        6          7..
+Byte  0     1     2      3       4         5        6          7..
        seq   cid   type   00   lenField   cmdId   payloadLen   payload
 
   seq       1-byte rolling counter (low 4 bits)
