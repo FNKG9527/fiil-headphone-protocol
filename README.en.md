@@ -48,7 +48,7 @@ To understand the whole picture: read **§0 Key findings at a glance** and **§5
 ```
 Frame layout (both command namespaces share the same transport channel)
 
-Byte  0     1     2      3       4         5        6          7..
+  Byte  0     1     2      3       4         5        6          7..
        seq   cid   type   00   lenField   cmdId   payloadLen   payload
 
   seq       1-byte rolling counter (low 4 bits)

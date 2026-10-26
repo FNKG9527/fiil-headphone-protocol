@@ -388,7 +388,7 @@ Both `0` and `255 (0xFF)` are treated as "no data" and displayed as `--`. **Do n
 
 **All five levels are usable** (`exp_maf_five.py` → `evidence/maf_five_20261025.txt`: SET 0→4 level by level, the ACK for every level was `OK`,
 and the read-back at @3.0 s always equaled the written value). The earlier judgment that "only 0/1/2 are covered" was a **sampling bias** — at the time only the values reported by the headset were read passively,
-3/4 were never sent, so it could not be inferred from that that the firmware does not support them.
+3/4 were never sent, so it could not be inferred from this that the firmware does not support them.
 
 > ⚠️ Note the alignment with the target description: the target says "Noise cancellation / **Adaptive** / Wind / Monitor / Off", whereas the FIIL+ original is
 > "Off / Noise cancellation / Open / **Awareness** / Wind". That is, "Adaptive" in the target has **no corresponding wire value** in this protocol;
@@ -561,9 +561,9 @@ RX  xx 01 02 00 03 03 01 00       # last byte 00 = success
 | 2 | Volume low |
 | 3 | Mute |
 
-**Do not implement it on the intuition that "a larger number is louder"**. Basis: the FIIL+ `res/values/arrays.xml` array
+**Do not implement it on the intuition that "a larger number is louder"**. Basis: the FIIL+ `res/values/arrays.xml` string-array
 `f43_select_operate_volume` (volume high / volume medium / volume low / mute), and
-`setVolume(int)` in `com/fengeek/main/f046/fragment/F046HomeFragment.java:524-538`:
+`com/fengeek/main/f046/fragment/F046HomeFragment.java:524-538` `setVolume(int)`:
 `==3 → "mute"`, `==2 → "prompt tone-low"`, `==1 → "prompt tone-medium"`, `==0 → "prompt tone-high"`.
 
 ### 8bis.3 Measurement Record
@@ -625,7 +625,7 @@ Log original: `evidence/fiil_log_20261025_155218.txt` (383 lines).
 ```
 TX  xx 27 01 00 02 04 00
 RX  xx 27 02 00 0E 04 0A 0E 08 06 04 02 00 01 FA FC FE 02
-                     │  │  └────── 12-byte curve (signed) ──────
+                     │  │  └────── 12-byte signed curve ──────
                      │  └ payloadLen = 0x0C = 12 (frame-header field)
                      └ cmdId = 4
 ```

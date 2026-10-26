@@ -57,8 +57,8 @@ This directory holds the raw captures and probe logs referenced throughout the d
 ### Session logs (`fiil_log_*.txt`)
 
 ```
-15:49:24.613  TX  setUnlock (connection handshake)        00 27 01 00 04 FF 02 02 34
-15:49:24.660  RX  RESP cid=39 cmd=255 len=1    00 27 02 00 03 FF 01 FF
+15:49:24.613  TX  setUnlock (connection handshake)  00 27 01 00 04 FF 02 02 34
+15:49:24.660  RX  RESP cid=39 cmd=255 len=1         00 27 02 00 03 FF 01 FF
 ```
 
 On the left is the local timestamp; `TX` means host-to-headset, `RX` means a reply from the headset.
