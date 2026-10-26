@@ -1,4 +1,4 @@
-[简体中文](SECURITY.md) | **[English](SECURITY.en.md)**
+[简体中文](../SECURITY.md) | **[English](SECURITY.md)**
 
 # Security Policy
 
@@ -78,10 +78,10 @@ For redaction issues we follow the principle of **fix first, discuss later** —
 
 - Vulnerabilities in the **earphone firmware** itself (this repository does not ship firmware; please contact the manufacturer directly)
 - Vulnerabilities in the **FIIL+ App** (same as above)
-- Plain technical disagreements (that is what issues are for; see [CONTRIBUTING.en.md](CONTRIBUTING.en.md))
+- Plain technical disagreements (that is what issues are for; see [CONTRIBUTING.md](CONTRIBUTING.md))
 
 ---
 
 ## Acknowledgements
 
-Responsible disclosures are recorded in the Security section of [CHANGELOG.en.md](CHANGELOG.en.md) once fixed (unless you ask to remain anonymous).
+Responsible disclosures are recorded in the Security section of [CHANGELOG.md](CHANGELOG.md) once fixed (unless you ask to remain anonymous).

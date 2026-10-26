@@ -1,4 +1,4 @@
-[简体中文](CODE_OF_CONDUCT.md) | **[English](CODE_OF_CONDUCT.en.md)**
+[简体中文](../CODE_OF_CONDUCT.md) | **[English](CODE_OF_CONDUCT.md)**
 
 # Contributor Code of Conduct
 
@@ -24,7 +24,7 @@ We as members, contributors, and leaders pledge to make participation in our com
 - Trolling, insulting or derogatory comments, and personal or political attacks
 - Public or private harassment
 - Publishing others' private information, such as a real name, home address, email address or device identifier, without their explicit permission
-- **Encouraging or instructing others to engage in unlawful use** (for the specific boundaries, see [DISCLAIMER.en.md](DISCLAIMER.en.md))
+- **Encouraging or instructing others to engage in unlawful use** (for the specific boundaries, see [DISCLAIMER.md](DISCLAIMER.md))
 - Other conduct which could reasonably be considered inappropriate in a professional setting
 
 ---
@@ -45,7 +45,7 @@ This Code of Conduct applies within all project spaces, and also applies when an
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement through the private channel described in [SECURITY.en.md](SECURITY.en.md).
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement through the private channel described in [SECURITY.md](SECURITY.md).
 
 All complaints will be reviewed and investigated promptly and fairly. All community leaders are obligated to respect the privacy and security of the reporter of any incident.
 

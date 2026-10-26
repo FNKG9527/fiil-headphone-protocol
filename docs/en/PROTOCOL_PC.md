@@ -1,4 +1,4 @@
-[简体中文](PROTOCOL_PC.md) | **[English](PROTOCOL_PC.en.md)**
+[简体中文](../PROTOCOL_PC.md) | **[English](PROTOCOL_PC.md)**
 
 # PROTOCOL_PC.md — FIIL Headphone BLE GATT Protocol Specification (PC Probe Measured Edition)
 

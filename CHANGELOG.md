@@ -1,4 +1,4 @@
-**[简体中文](CHANGELOG.md)** | [English](CHANGELOG.en.md)
+**[简体中文](CHANGELOG.md)** | [English](en/CHANGELOG.md)
 
 # 更新日志
 
@@ -48,7 +48,7 @@
   - 贡献指南、行为准则、安全政策
 
 - **中文 / English 双语**
-  - 全部 11 份 Markdown 文档均提供英文版（`*.en.md`）
+  - 全部 11 份 Markdown 文档均提供英文版，收在 `en/` 与 `docs/en/`（镜像目录结构，中文为正文）
   - 每份文档顶部有语言切换链接，两种语言各自完整可读，不是同一文件内的对照排版
   - 代码围栏内的标识符、字节序列、UUID、地址占位符与 §编号在两种语言间逐字一致
 

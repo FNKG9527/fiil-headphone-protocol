@@ -1,8 +1,8 @@
-**[简体中文](README.md)** | [English](README.en.md)
+**[简体中文](README.md)** | [English](en/README.md)
 
 # 文档索引
 
-三份文档，三种读法。按你的目的选一条路。
+三份文档，三种读法。按你的目的选一条路。英文译本在同一目录下的 [`en/`](en/README.md)。
 
 ---
 

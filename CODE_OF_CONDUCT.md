@@ -1,4 +1,4 @@
-**[简体中文](CODE_OF_CONDUCT.md)** | [English](CODE_OF_CONDUCT.en.md)
+**[简体中文](CODE_OF_CONDUCT.md)** | [English](en/CODE_OF_CONDUCT.md)
 
 # 贡献者行为准则
 

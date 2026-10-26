@@ -1,4 +1,4 @@
-**[简体中文](DISCLAIMER.md)** | [English](DISCLAIMER.en.md)
+**[简体中文](DISCLAIMER.md)** | [English](en/DISCLAIMER.md)
 
 # 使用边界与合规声明
 

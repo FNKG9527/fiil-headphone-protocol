@@ -1,10 +1,10 @@
-[简体中文](PROTOCOL_FIIL.md) | **[English](PROTOCOL_FIIL.en.md)**
+[简体中文](../PROTOCOL_FIIL.md) | **[English](PROTOCOL_FIIL.md)**
 
 # FIIL Earbud Communication Protocol Specification (PROTOCOL_FIIL.md)
 
 > This document is the **master protocol specification**. It grew out of the implementation of a third-party Android control module, and every entry comes from the decompiled source of **FIIL+ 3.5.2 (`com.fengeek.f002`, versionCode 175, minSdk 26, compileSdk 33)**, with the file and line number cited for each item.
 >
-> The companion full reverse-engineering report is `docs/REVERSE_ENGINEERING_REPORT.en.md`; this document keeps only the parts "required to implement a controller", and adds the **Mate protocol family (the third command namespace)** found in the second round.
+> The companion full reverse-engineering report is `docs/en/REVERSE_ENGINEERING_REPORT.md`; this document keeps only the parts "required to implement a controller", and adds the **Mate protocol family (the third command namespace)** found in the second round.
 >
 > **About the word "module" in this document**: it means a third-party Android controller that the author wrote to verify this protocol (experimental, not distributed with this repository). Wherever "module implementation / module strategy" appears, it means **the trade-offs made by that controller**, not a requirement of the protocol itself — you may decide differently in your own architecture.
 
@@ -693,4 +693,4 @@ The purpose of this document is to **study Bluetooth protocol stack design** and
 - bypass a device's firmware checks or perform unauthorized OTA;
 - claim compatibility with FIIL official products in a commercial product.
 
-This repository contains documentation only, no code. The upstream reference projects (HyperPods / HuaweiPods / OppoPods) are licensed under GPL-3.0, and their code has **not** been copied into this repository; see [NOTICE](../NOTICE) for the attribution and the exact boundary.
+This repository contains documentation only, no code. The upstream reference projects (HyperPods / HuaweiPods / OppoPods) are licensed under GPL-3.0, and their code has **not** been copied into this repository; see [NOTICE](../../NOTICE) for the attribution and the exact boundary.

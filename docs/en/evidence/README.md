@@ -1,4 +1,4 @@
-[简体中文](README.md) | **[English](README.en.md)**
+[简体中文](../../evidence/README.md) | **[English](README.md)**
 
 # Capture Evidence Index
 
@@ -57,8 +57,8 @@ This directory holds the raw captures and probe logs referenced throughout the d
 ### Session logs (`fiil_log_*.txt`)
 
 ```
-15:49:24.613  TX  setUnlock (connection handshake)  00 27 01 00 04 FF 02 02 34
-15:49:24.660  RX  RESP cid=39 cmd=255 len=1         00 27 02 00 03 FF 01 FF
+15:49:24.613  TX  setUnlock (handshake)        00 27 01 00 04 FF 02 02 34
+15:49:24.660  RX  RESP cid=39 cmd=255 len=1    00 27 02 00 03 FF 01 FF
 ```
 
 On the left is the local timestamp; `TX` means host-to-headset, `RX` means a reply from the headset.
@@ -86,4 +86,4 @@ These logs correspond to one debugging session on one specific device; they are 
 2. Handshake in the order given in `PROTOCOL_PC.md` §4
 3. Send the commands in `unverified_cmdid_20261025_014438.txt` one by one
 
-Different firmware versions may return different values. **If your results differ from the logs in this directory, that is new data, not an error** — please submit it as described in [CONTRIBUTING.en.md](../../CONTRIBUTING.en.md) and include your firmware version.
+Different firmware versions may return different values. **If your results differ from the logs in this directory, that is new data, not an error** — please submit it as described in [CONTRIBUTING.md](../../../en/CONTRIBUTING.md) and include your firmware version.

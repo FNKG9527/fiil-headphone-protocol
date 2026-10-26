@@ -1,4 +1,4 @@
-[简体中文](CHANGELOG.md) | **[English](CHANGELOG.en.md)**
+[简体中文](../CHANGELOG.md) | **[English](CHANGELOG.md)**
 
 # Changelog
 
@@ -48,7 +48,7 @@ Initial public release.
   - Contributing guide, code of conduct, security policy
 
 - **Chinese / English bilingual editions**
-  - All 11 Markdown documents have an English counterpart (`*.en.md`)
+  - All 11 Markdown documents have an English counterpart, kept in `en/` and `docs/en/` (a mirror tree; Chinese is the authoritative text)
   - Each document carries a language switcher at the top; the two languages are each complete and readable on their own rather than interleaved in one file
   - Identifiers, byte sequences, UUIDs, address placeholders and section numbers inside code fences are byte-for-byte identical across both languages
 

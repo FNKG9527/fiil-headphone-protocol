@@ -1,4 +1,4 @@
-**[简体中文](PROTOCOL_PC.md)** | [English](PROTOCOL_PC.en.md)
+**[简体中文](PROTOCOL_PC.md)** | [English](en/PROTOCOL_PC.md)
 
 # PROTOCOL_PC.md — FIIL 耳机 BLE GATT 协议规格（PC 探针实测版）
 

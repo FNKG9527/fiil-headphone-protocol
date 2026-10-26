@@ -1,9 +1,11 @@
-**[简体中文](README.md)** | [English](README.en.md)
+**[简体中文](README.md)** | [English](en/README.md)
 
 # FIIL 耳机蓝牙协议逆向笔记
 
 > 对 FIIL（斐耳）官方控制 App **FIIL+ 3.5.2** 的静态逆向成果整理，以及一台真实耳机上的逐条实机验证记录。
 > 目标只有一个：**让第三方能在自己的设备上正确地说 FIIL 的协议**。
+
+本仓库以**中文为正文**。英文对照译本在 [`en/`](en/README.md)，目录结构与中文版一一对应。
 
 ![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)
 ![Docs](https://img.shields.io/badge/docs-3%20%E4%BB%BD-blue.svg)
@@ -96,12 +98,16 @@ FIIL 耳机没有公开的开发者协议文档。官方 App 能做的每一件�
 ├── CODE_OF_CONDUCT.md
 ├── SECURITY.md
 ├── CHANGELOG.md
+├── en/                              # 英文对照译本（与中文版目录一一对应）
+│   ├── README.md
+│   └── DISCLAIMER.md · CONTRIBUTING.md · CODE_OF_CONDUCT.md · SECURITY.md · CHANGELOG.md
 └── docs/
     ├── README.md                    # 文档索引（含阅读顺序）
     ├── PROTOCOL_FIIL.md             # 协议规格总纲
     ├── PROTOCOL_PC.md               # BLE GATT 实测手册
     ├── REVERSE_ENGINEERING_REPORT.md# 拆包分析报告
     ├── evidence/                    # 原始抓包日志（已脱敏）
+    ├── en/                          # 上述文档的英文译本
     └── reference/
         └── _cmd_table.txt           # 190 条 FFCOMMAND 原始导出
 ```

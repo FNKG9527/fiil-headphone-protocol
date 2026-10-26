@@ -1,4 +1,4 @@
-[简体中文](CONTRIBUTING.md) | **[English](CONTRIBUTING.en.md)**
+[简体中文](../CONTRIBUTING.md) | **[English](CONTRIBUTING.md)**
 
 # Contributing Guide
 
@@ -129,10 +129,10 @@ Use a table for verification results, with the columns fixed as: **Item / Comman
 
 ## Code of Conduct
 
-Participation in this project means you agree to abide by [CODE_OF_CONDUCT.en.md](CODE_OF_CONDUCT.en.md).
+Participation in this project means you agree to abide by [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
 ---
 
 ## License
 
-By submitting a contribution, you agree to license it under **[CC BY-SA 4.0](LICENSE)**.
+By submitting a contribution, you agree to license it under **[CC BY-SA 4.0](../LICENSE)**.

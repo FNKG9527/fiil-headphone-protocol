@@ -1,4 +1,4 @@
-**[简体中文](SECURITY.md)** | [English](SECURITY.en.md)
+**[简体中文](SECURITY.md)** | [English](en/SECURITY.md)
 
 # 安全政策
 

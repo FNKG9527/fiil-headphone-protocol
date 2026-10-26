@@ -1,4 +1,4 @@
-**[简体中文](PROTOCOL_FIIL.md)** | [English](PROTOCOL_FIIL.en.md)
+**[简体中文](PROTOCOL_FIIL.md)** | [English](en/PROTOCOL_FIIL.md)
 
 # FIIL 耳机通信协议规格（PROTOCOL_FIIL.md）
 

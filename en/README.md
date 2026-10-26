@@ -1,9 +1,13 @@
-[简体中文](README.md) | **[English](README.en.md)**
+[简体中文](../README.md) | **[English](README.md)**
 
 # FIIL Headphone Bluetooth Protocol Reverse-Engineering Notes
 
 > A write-up of the static reverse-engineering results for FIIL (Feier)'s official control app **FIIL+ 3.5.2**, together with a command-by-command on-device verification record on one real pair of headphones.
 > There is only one goal: **to let third parties speak FIIL's protocol correctly on their own devices.**
+
+This is the English translation. **The Chinese text is the authoritative version**; the original is at the repository root, and this `en/` tree mirrors its layout one-to-one.
+
+This is the English translation. **The Chinese text is the authoritative version**; the original is at the repository root, and this `en/` tree mirrors its layout one-to-one.
 
 ![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)
 ![Docs](https://img.shields.io/badge/docs-3%20%E4%BB%BD-blue.svg)
@@ -34,9 +38,9 @@ Every conclusion carries its source: either a `file:line` in the decompiled arti
 
 | Document | For | Contents |
 |---|---|---|
-| [**PROTOCOL_FIIL.en.md**](docs/PROTOCOL_FIIL.en.md) | People who want to **understand** the protocol | The complete specification of the three command namespaces: GAIA / Mate / Doubao, model routing, the semantic difference between GET and SET, and the list of unconfirmed items |
-| [**PROTOCOL_PC.en.md**](docs/PROTOCOL_PC.en.md) | People who want to **send commands themselves** | A BLE GATT field manual measured on one real pair of headphones: UUIDs, handshake, the full table of 18 GETs, five noise-cancellation states, battery parsing, take-effect latency |
-| [**REVERSE_ENGINEERING_REPORT.en.md**](docs/REVERSE_ENGINEERING_REPORT.en.md) | People who want to **know how the app does it** | An unpacking analysis of FIIL+ 3.5.2: four transport links, the 190-command classification, the model table, and the anti-reversing design points |
+| [**PROTOCOL_FIIL.md**](../docs/en/PROTOCOL_FIIL.md) | People who want to **understand** the protocol | The complete specification of the three command namespaces: GAIA / Mate / Doubao, model routing, the semantic difference between GET and SET, and the list of unconfirmed items |
+| [**PROTOCOL_PC.md**](../docs/en/PROTOCOL_PC.md) | People who want to **send commands themselves** | A BLE GATT field manual measured on one real pair of headphones: UUIDs, handshake, the full table of 18 GETs, five noise-cancellation states, battery parsing, take-effect latency |
+| [**REVERSE_ENGINEERING_REPORT.md**](../docs/en/REVERSE_ENGINEERING_REPORT.md) | People who want to **know how the app does it** | An unpacking analysis of FIIL+ 3.5.2: four transport links, the 190-command classification, the model table, and the anti-reversing design points |
 
 To get hands-on right away: read **§0 Conclusions at a Glance** and **§4 Connection Initialization Sequence** in `PROTOCOL_PC.md` first — ten minutes is enough to send your first command.
 To understand the whole picture: read **§0 Key findings at a glance** and **§5 Models and routing** in `PROTOCOL_FIIL.md`.
@@ -96,12 +100,17 @@ Anything unconfirmed is always marked `Unconfirmed` in the documentation and col
 ├── CODE_OF_CONDUCT.md
 ├── SECURITY.md
 ├── CHANGELOG.md
+├── en/                              # English translation (mirrors the Chinese layout)
+│   ├── README.md
+│   ├── DISCLAIMER.md · CONTRIBUTING.md · CODE_OF_CONDUCT.md
+│   └── SECURITY.md · CHANGELOG.md
 └── docs/
     ├── README.md                    # Documentation index (with reading order)
     ├── PROTOCOL_FIIL.md             # Protocol specification overview
     ├── PROTOCOL_PC.md               # BLE GATT field manual
     ├── REVERSE_ENGINEERING_REPORT.md# Unpacking analysis report
     ├── evidence/                    # Raw capture logs (redacted)
+    ├── en/                          # English translation of the documents above
     └── reference/
         └── _cmd_table.txt           # Raw export of the 190 FFCOMMANDs
 ```
@@ -124,7 +133,7 @@ The documentation in this repository comes from the debugging process on one rea
 **Not included**: the original APK file, decompilation output, app resources, any keys or certificates, any account or personal information.
 The APK hash is kept in the sample-information section of `REVERSE_ENGINEERING_REPORT.md`, purely to identify the version that was analysed.
 
-If you still find information in this repository that can be tied to a specific individual, please get in touch as described in [SECURITY.en.md](SECURITY.en.md); we will deal with it immediately.
+If you still find information in this repository that can be tied to a specific individual, please get in touch as described in [SECURITY.md](SECURITY.md); we will deal with it immediately.
 
 ---
 
@@ -134,18 +143,18 @@ The purpose of these documents is **interoperability research and local control*
 
 Not permitted: bypassing firmware checks or performing unauthorised OTA, redistributing FIIL's private implementation or resources as your own work, or claiming official FIIL compatibility in a commercial product.
 
-The full terms are in [DISCLAIMER.en.md](DISCLAIMER.en.md).
+The full terms are in [DISCLAIMER.md](DISCLAIMER.md).
 
 ---
 
 ## License
 
-The documentation is released under **[CC BY-SA 4.0](LICENSE)** — you may copy, modify and use it commercially, provided you give attribution and distribute it under the same license.
+The documentation is released under **[CC BY-SA 4.0](../LICENSE)** — you may copy, modify and use it commercially, provided you give attribution and distribute it under the same license.
 
-FIIL, FIIL+ and related names are trademarks of Feier Technology. This repository has no affiliation with Feier Technology, has not been authorised or endorsed by it, and exists for interoperability research only. See [NOTICE](NOTICE) for details.
+FIIL, FIIL+ and related names are trademarks of Feier Technology. This repository has no affiliation with Feier Technology, has not been authorised or endorsed by it, and exists for interoperability research only. See [NOTICE](../NOTICE) for details.
 
 ---
 
 ## Contributing
 
-Found an error, have measured data for another model, or have already verified an "Unconfirmed" item — issues and PRs are welcome; the format is in [CONTRIBUTING.en.md](CONTRIBUTING.en.md). **Errata with capture logs are merged first.**
+Found an error, have measured data for another model, or have already verified an "Unconfirmed" item — issues and PRs are welcome; the format is in [CONTRIBUTING.md](CONTRIBUTING.md). **Errata with capture logs are merged first.**
