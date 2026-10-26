@@ -1,3 +1,5 @@
+**[简体中文](SECURITY.md)** | [English](SECURITY.en.md)
+
 # 安全政策
 
 ## 本仓库的定位

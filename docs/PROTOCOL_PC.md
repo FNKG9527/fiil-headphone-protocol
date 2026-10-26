@@ -1,3 +1,5 @@
+**[简体中文](PROTOCOL_PC.md)** | [English](PROTOCOL_PC.en.md)
+
 # PROTOCOL_PC.md — FIIL 耳机 BLE GATT 协议规格（PC 探针实测版）
 
 > 本文件所有 UUID 与字节都来自 **本次实机抓包**，不是推测。

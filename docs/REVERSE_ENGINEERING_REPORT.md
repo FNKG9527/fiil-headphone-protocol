@@ -1,3 +1,5 @@
+**[简体中文](REVERSE_ENGINEERING_REPORT.md)** | [English](REVERSE_ENGINEERING_REPORT.en.md)
+
 # FIIL+ 3.5.2 逆向拆包分析报告
 
 > 目标：搞清楚 FIIL+（斐耳）App **怎么连上自家耳机**、**怎么控制**、**有哪些功能**、**怎么发命令**。
@@ -946,5 +948,3 @@ Windows 没有原生 rfcomm 命令行，可用 Python `pybluez` 或 `bleak`（BL
 ---
 
 *报告生成依据：jadx 1.5.6 反编译 `fiil+_3.5.2.apk`，全部结论附源码行号，可逐条回查。*
-
-

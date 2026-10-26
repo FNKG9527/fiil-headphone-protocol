@@ -1,3 +1,5 @@
+**[简体中文](PROTOCOL_FIIL.md)** | [English](PROTOCOL_FIIL.en.md)
+
 # FIIL 耳机通信协议规格（PROTOCOL_FIIL.md）
 
 > 本文档是**协议规格总纲**，源自一个第三方 Android 控制模块的实现过程，所有条目均来自对 **FIIL+ 3.5.2（`com.fengeek.f002`，versionCode 175，minSdk 26，compileSdk 33）** 的反编译源码，逐条标注文件与行号。
@@ -372,16 +374,16 @@ FiilMate.Param.LOW_LATENCY = 37、payload [level]。**「Mate 二态」是早期
 
 | 项 | 值 |
 |---|---|
-| 写 |  0 01 01 00 03 03 01 [vol]（com\fengeek\main\i\d\f.java:711-726 setTone，buffer {vol}） |
-| 读 |  0 27 01 00 02 82 00（cid=39，cmdId=130 = -126 & 0xFF，c.java:251 getToneStatus） |
-| 读回样本 |  1 27 02 00 03 82 01 02 |
+| 写 | 00 01 01 00 03 03 01 [vol]（com\fengeek\main\i\d\f.java:711-726 setTone，buffer {vol}） |
+| 读 | 00 27 01 00 02 82 00（cid=39，cmdId=130 = -126 & 0xFF，c.java:251 getToneStatus） |
+| 读回样本 | 01 27 02 00 03 82 01 02 |
 | 线值 | **0=音量高 / 1=中 / 2=低 / 3=静音**（与直觉相反，0 最响） |
 
 **读回偏移的坑**：上面的回包逐字节是
 seq=01 | cid=27 | type=02 | reserved=00 | lenField=03 | cmd=82 | payloadLen=01 | payload=02
-—— 长度字段  x03 减 2 得 payloadLen = 1，**payload 只有 1 字节**，音量就在 payload[0]。
-早期把  1（payloadLen）误读成「字段存在标志」，据此写成「音量在 payload[1]」，
-靠 lse 读 payload[0] 的容错才侥幸读对；现已改成真实偏移并加单测钉死。
+—— 长度字段 0x03 减 2 得 payloadLen = 1，**payload 只有 1 字节**，音量就在 payload[0]。
+早期把 01（payloadLen）误读成「字段存在标志」，据此写成「音量在 payload[1]」，
+靠 else 读 payload[0] 的容错才侥幸读对；现已改成真实偏移并加单测钉死。
 
 
 ### 3.8 多点连接（蓝牙畅连）
@@ -599,7 +601,7 @@ seq  cid=40 t=3 rsv len=14 cmd=0x83(131) len=12  payload(12B，疑似对端设�
 
 | 项 | 值 |
 |---|---|
-| 存储 | `SharedPreferences("fiilpods_config")` 的 `ear_type_override`（0 = 未指定）；读写见 `FiilConfig.readEarTypeOverride` / `writeEarTypeOverride` |
+| 存储 | `SharedPreferences("pods_config")` 的 `ear_type_override`（0 = 未指定）；读写见 `FiilConfig.readEarTypeOverride` / `writeEarTypeOverride` |
 | 地址绑定 | 同文件键 `ear_type_for_<MAC>`；手动指定、蓝牙名推断、`GET_EARTYPE` 回包三条路径识别出的型号都会落一份，下次同地址连接直接复用 |
 | 生效时机 | `FiilRfcommController.connect()` 开头先读它；非 0 时直接采用，且 `earTypeOverridden = true` |
 | 优先级 | 手动指定 > 地址绑定 > 蓝牙**原始名**推断 > `-1` 未知（等回包）；显示名用别名，型号识别**只用原始名** |
@@ -691,9 +693,4 @@ MAC 前缀的逆向出处：FIIL+ 在所有 OTA 页都把 `device.getAddress().s
 - 绕过设备的固件校验或进行未授权的 OTA；
 - 商业产品中声称与 FIIL 官方兼容。
 
-上游参考项目（HyperPods / HuaweiPods / OppoPods）均为 GPL-3.0，本模块沿用同一许可证。
-
-
-
-
-
+本仓库只包含文档，不含任何代码。上游参考项目（HyperPods / HuaweiPods / OppoPods）以 GPL-3.0 授权，其代码**未**被复制进本仓库；相关方法论的引用与边界见 [NOTICE](../NOTICE)。

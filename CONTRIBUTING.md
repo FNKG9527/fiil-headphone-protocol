@@ -1,3 +1,5 @@
+**[简体中文](CONTRIBUTING.md)** | [English](CONTRIBUTING.en.md)
+
 # 贡献指南
 
 本仓库是文档型项目，最有价值的贡献是**带证据的勘误**和**新机型的实测数据**。

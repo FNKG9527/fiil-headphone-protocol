@@ -1,3 +1,5 @@
+**[简体中文](DISCLAIMER.md)** | [English](DISCLAIMER.en.md)
+
 # 使用边界与合规声明
 
 ## 本仓库是什么
